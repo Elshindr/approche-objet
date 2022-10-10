@@ -5,24 +5,13 @@ import entites2.Personne;
 public class TestPersonne {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Personne monPote = new Personne();
-		monPote.nom = "Jean";
-		monPote.prenom="Massiet";
-		monPote.adresseP.numRue= 33;
-		monPote.adresseP.lblRue= "Avenue de la république";
-		monPote.adresseP.ville= "Salon";
-		monPote.adresseP.codePostal = "45555";
-		
-		Personne laSoeurDeMaPote = new Personne();
-		monPote.nom = "Jeannette";
-		monPote.prenom="Massiet";
-		monPote.adresseP.numRue= 12343;
-		monPote.adresseP.lblRue= "Avenue des balayettes";
-		monPote.adresseP.ville= "Cabries";
-		monPote.adresseP.codePostal = "20234";
-		
+		AdressePostale facturation = new AdressePostale(23, "allée des ananas","13456","Nouméa");
 
+		AdressePostale personnelle = new AdressePostale(234, "Rue Jean Massiet", "12343", "londre");
+		
+		Personne monPote = new Personne("Jean","Massiet", facturation );
+
+		Personne laSoeurDeMaPote = new Personne("Jeannette", "Massiet", personnelle);
 	}
 
 }
