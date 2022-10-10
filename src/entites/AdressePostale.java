@@ -19,4 +19,20 @@ public class AdressePostale {
 		this.codePostal = codePostal;
 		this.ville = ville;
 	}
+	
+	public int getNumRue() {
+		return this.numRue;
+	}
+	
+	public String getLblRue() {
+		return this.lblRue;
+	}
+	
+	public String getCodePostal() {
+		return this.codePostal;
+	}
+	
+	public String getVille() {
+		return this.ville;
+	}
 }
