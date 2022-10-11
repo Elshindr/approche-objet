@@ -25,7 +25,7 @@ public class Personne {
 	 * Afficher le nom et le prenom d'une personne
 	 */
 	public void afficherNomPrenom() {
-		System.out.println(this.nom + " " + this.prenom);
+		System.out.println(this.nom.toUpperCase() + " " + this.prenom);
 	}
 	
 	public void afficherAdresse() {
