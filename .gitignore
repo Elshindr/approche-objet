@@ -1,4 +1,10 @@
+# Eclipse
 .classpath
 *.class
 .project
 /.settings
+
+# Intellj
+/.idea
+/bin
+approche-objet.iml
