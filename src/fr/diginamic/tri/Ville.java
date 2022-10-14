@@ -1,9 +1,9 @@
-package fr.diginamic.liste;
+package fr.diginamic.tri;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Collections;
 
-public class Ville {
+public class Ville implements Comparable<Ville>{
     private String nom;
     private int hab;
 
@@ -32,39 +32,25 @@ public class Ville {
         arrVille.add(v_7);
         arrVille.add(v_8);
 
-        int max = 0;
-        int min = v_1.getHab();
-
-        for(Ville ville : arrVille){
-            if(max < ville.getHab()){
-                max = ville.getHab();
-            }
-            if(min > ville.getHab()){
-                min = ville.getHab();
-            }
-        }
-        System.out.println("MAX:: " + max);
-
-        int finalMin = min;
-        arrVille.removeIf(ville -> ville.getHab() == finalMin);
-
-        for(Ville ville : arrVille){
-            System.out.println(ville.getNom());
-        }
-
-        System.out.println("MAJ::");
-        Iterator<Ville> iterator = arrVille.iterator();
-        while(iterator.hasNext()) {
-            Ville ville = iterator.next();
-            if(ville.getHab() > 100000){
-                ville.setNom(ville.getNom().toUpperCase());
-            }
-            arrVille.set(arrVille.indexOf(ville), ville);
-        }
-
+        // Tri avec comparator habitant
+        System.out.println("\nPar Habitant ::");
+        Collections.sort(arrVille, new ComparatorHabitant());
         for (Ville ville: arrVille){
             System.out.println(ville.getNom());
         }
+
+        // Tri avec comparator nom
+        System.out.println("\nPar Nom ::");
+        Collections.sort(arrVille, new ComparatorNom());
+        for (Ville ville: arrVille){
+            System.out.println(ville.getNom());
+        }
+
+        // Tri sur la methode implémenté dans Ville
+       /** Collections.sort(arrVille);
+        for (Ville ville: arrVille){
+            System.out.println(ville.getNom());
+        }**/
     }
 
     public String getNom() {
@@ -82,4 +68,22 @@ public class Ville {
     public void setHab(int hab) {
         this.hab = hab;
     }
+
+    /**
+    @Override
+    public int compareTo(Ville o) {
+        return this.nom.compareTo(o.getNom());
+    }**/
+
+    @Override
+    public int compareTo(Ville o) {
+        if (this.hab > o.getHab()){
+            return 1;
+        }
+        if (this.hab < o.getHab()){
+            return -1;
+        }
+        return 0;
+    }
 }
+
