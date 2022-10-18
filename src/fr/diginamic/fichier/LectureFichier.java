@@ -1,5 +1,6 @@
 package fr.diginamic.fichier;
-import java.io.*;
+
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,10 +13,12 @@ import java.util.List;
 public class LectureFichier {
     public static void main(String[] args) throws IOException {
 
-        Path fileRenscmt = Paths.get("C:/Temp/Java/7 - Approche Objet/J5 & J6 - Collections et fichiers/TP/recensement.csv");
-        File fileVilles = new File ("C:/Temp/Java/7 - Approche Objet/J5 & J6 - Collections et fichiers/TP/villes.txt");
-        fileVilles.createNewFile();
-        Path pathVilles = Paths.get(fileVilles.getPath());
+        Path fileRenscmt = Paths.get("C:/Users/Ydrani/Desktop/Diginamic/Java/7 - Approche Objet/J5 & J6 - Collections et fichiers/TP/recensement.csv");
+        Path pathVilles = Paths.get("C:/Users/Ydrani/Desktop/Diginamic/Java/7 - Approche Objet/J5 & J6 - Collections et fichiers/TP/villes.txt");
+
+        if(!Files.exists(pathVilles)){
+            Files.createFile(pathVilles);
+        }
 
         List<Ville> arrVille = new ArrayList<>();
         List<String> arrSave = new ArrayList<>();
