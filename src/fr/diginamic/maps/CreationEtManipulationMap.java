@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 public class CreationEtManipulationMap {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         HashMap<Integer, String> mapVilles = new HashMap<>();
         mapVilles.put(13, "Marseille");
         mapVilles.put(34, "Montpellier");

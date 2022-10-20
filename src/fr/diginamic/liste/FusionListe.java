@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FusionListe {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         List<String> liste1 = new ArrayList<>();
         liste1.add("Rouge");

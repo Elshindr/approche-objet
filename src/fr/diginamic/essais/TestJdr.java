@@ -170,7 +170,7 @@ public class TestJdr {
 		
 		
 		Creature creature = new Creature(typeCreature);
-		System.out.println(creature.getType().toString().toUpperCase() +":: Vie: "+ creature.getPointVie() +"  Force: "+ creature.getForce());
+		System.out.println(creature.getType().toUpperCase() +":: Vie: "+ creature.getPointVie() +"  Force: "+ creature.getForce());
 		
 		return creature;
 	}

@@ -1,4 +1,5 @@
 package entites;
+import static java.lang.Math.PI;
 
 public class Cercle {
 	private double rayon;
@@ -8,13 +9,11 @@ public class Cercle {
 	}
 
 	public double perimetre() {
-		// TODO Auto-generated method stub
-		return 3.14 * this.rayon * 2;
+		return PI * this.rayon * 2;
 	}
 
 	public double surface() {
-		// TODO Auto-generated method stub
-		return 3.14 * this.rayon * this.rayon;
+		return PI * this.rayon * this.rayon;
 	}
 
 	public double getRayon() {

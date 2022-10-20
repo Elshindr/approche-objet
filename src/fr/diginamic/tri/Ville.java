@@ -3,15 +3,35 @@ package fr.diginamic.tri;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * The type Ville.
+ */
 public class Ville implements Comparable<Ville>{
+    /**
+     * The Nom.
+     */
     private String nom;
+    /**
+     * The Hab.
+     */
     private int hab;
 
+    /**
+     * Instantiates a new Ville.
+     *
+     * @param nom the nom
+     * @param hab the hab
+     */
     public Ville(String nom, int hab) {
         this.nom = nom;
         this.hab = hab;
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         ArrayList<Ville> arrVille = new ArrayList<>();
         Ville v_1 = new Ville("Nice", 343000);
@@ -53,27 +73,41 @@ public class Ville implements Comparable<Ville>{
         }**/
     }
 
+    /**
+     * Gets nom.
+     *
+     * @return the nom
+     */
     public String getNom() {
         return nom;
     }
 
+    /**
+     * Sets nom.
+     *
+     * @param nom the nom
+     */
     public void setNom(String nom) {
         this.nom = nom;
     }
 
+    /**
+     * Gets hab.
+     *
+     * @return the hab
+     */
     public int getHab() {
         return hab;
     }
 
+    /**
+     * Sets hab.
+     *
+     * @param hab the hab
+     */
     public void setHab(int hab) {
         this.hab = hab;
     }
-
-    /**
-    @Override
-    public int compareTo(Ville o) {
-        return this.nom.compareTo(o.getNom());
-    }**/
 
     @Override
     public int compareTo(Ville o) {

@@ -2,8 +2,8 @@ package fr.diginamic.entites;
 
 public class Theatre {
 	
-	private String nom;
-	private int maxCapacite;
+	private final String nom;
+	private final int maxCapacite;
 	private int nbClient;
 	private double recetteTotale;
 	

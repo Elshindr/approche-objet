@@ -5,7 +5,7 @@ import java.util.*;
 public class Recensement{
     private static List<Region> arrRegion;
     private static List<Departement> arrDep ;
-    private static List<Ville> arrVille = new ArrayList<>();
+    private static final List<Ville> arrVille = new ArrayList<>();
     private static List<Ville> arrVilleByRegion;
     private static List<Ville> arrVilleByDep;
 

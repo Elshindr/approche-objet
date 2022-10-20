@@ -3,7 +3,7 @@ package fr.diginamic.maps;
 import java.util.HashMap;
 import java.util.Map;
 public class FusionMap {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         // Création map1
         HashMap<Integer, String> map1 = new HashMap<Integer, String>();
         map1.put(1, "Rouge");

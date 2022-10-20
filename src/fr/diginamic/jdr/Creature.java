@@ -6,9 +6,9 @@ public class Creature {
 	private final int MAX_PV;
 	private final int MIN_PV;
 	
-	private int force;
-	private int pointVie;
-	private String type;
+	private final int force;
+	private final int pointVie;
+	private final String type;
 	
 	public Creature(String type) {
 		this.type = type;

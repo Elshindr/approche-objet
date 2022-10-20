@@ -14,8 +14,8 @@ public class TestBanque {
 		
 		arrComptes[0] = nvCompte;
 		
-		CompteTaux nvCompteTaux = new CompteTaux(12345, 12356.94, (double)12.99);
-		arrComptes[1] = (Compte) nvCompteTaux;
+		CompteTaux nvCompteTaux = new CompteTaux(12345, 12356.94, 12.99);
+		arrComptes[1] = nvCompteTaux;
 		
 		for(Compte i : arrComptes) {
 			System.out.println(i);

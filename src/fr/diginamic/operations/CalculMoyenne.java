@@ -18,9 +18,9 @@ public class CalculMoyenne {
 			while(i < arrNbs.length){
 				arrNew[i] = arrNbs[i];
 				i++;
-			};
-					
-			arrNew[i] = nvNb;
+			}
+
+            arrNew[i] = nvNb;
 			arrNbs = arrNew;
 		}
 		else {

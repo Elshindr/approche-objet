@@ -11,7 +11,7 @@ public class Personnage {
 	private final int MAX_PV = 20;
 	private final int MIN_PV = 50;
 	
-	private int force;
+	private final int force;
 	private int pointVie;
 	private int score;
 	
